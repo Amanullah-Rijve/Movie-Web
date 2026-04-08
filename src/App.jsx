@@ -1,9 +1,13 @@
 import react from 'react'
 import { Movie } from './pages/Movie'
+import { MovieForm } from './components/Form'
 
 const App = ()=>{
 
-  return <Movie></Movie>
+  return<>
+  <MovieForm></MovieForm>
+  <Movie></Movie>
+  </> 
 }
 
 export default App

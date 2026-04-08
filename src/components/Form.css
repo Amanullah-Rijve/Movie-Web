@@ -1,0 +1,50 @@
+/* Form container */
+.movie-form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Title */
+.movie-form h2 {
+  color: #fff;
+  text-align: center;
+}
+
+/* Inputs */
+.movie-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #1f2937;
+  color: #fff;
+}
+
+/* Button */
+.movie-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e50914;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.movie-form button:hover {
+  background: #b20710;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .movie-form {
+    margin: 15px;
+    padding: 15px;
+  }
+}
