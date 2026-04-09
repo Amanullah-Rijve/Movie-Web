@@ -2,7 +2,7 @@ import { getService } from '../API/Api'
 import { Card } from '../components/Card'
 import { useEffect,useState } from 'react'
 
-export const Movie = ()=>{
+export const Movie = ({search})=>{
 
     const[data,setData]=useState([])
 
@@ -20,9 +20,14 @@ export const Movie = ()=>{
     useEffect(()=>{
         getMovieData()
     },[])
+
+    const filterData = data.filter((movie)=>
+    movie.original_title.toLowerCase().includes(search.toLowerCase())
+    )
+
 return <ul>
     {
-        data.map((curElm)=>{
+        filterData.map((curElm)=>{
         return <Card key={curElm.movie_id} MovieData={curElm} ></Card>
         })
     }
